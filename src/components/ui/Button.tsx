@@ -1,4 +1,4 @@
-function Button(){
+function Button({label, type, variant}: ButtonProps){
     return(
         <button>
 
