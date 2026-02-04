@@ -1,7 +1,12 @@
+import type { ButtonProps } from '../../types/UiTypes';
+
 function Button({label, type, variant}: ButtonProps){
     return(
-        <button>
-
+        <button
+            type={type}
+            className={`${variant}`}
+        >
+            {label}
         </button>
     )
 }
