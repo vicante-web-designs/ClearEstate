@@ -1,8 +1,10 @@
+import Navbar from '../layout/Navbar'
+
 function HomePage(){
     return(
-        <>
-            <h1>Hello</h1>
-        </>
+        <main>
+            
+        </main>
     )
 }
 
