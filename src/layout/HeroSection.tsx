@@ -12,7 +12,7 @@ function HeroSection(){
                     /Images/Hero/Hero_Image/Hero_Image_w_1045.jpg 1045w,
                     /Images/Hero/Hero_Image/Hero_Image_w_1084.jpg 1084w"
                     src="/Images/Hero/Hero_Image/Hero_Image_w_1084.jpg"
-                    alt=""
+                    alt="Hero Section Image"
                     className='absolute -z-1 w-full h-full'></img>
                 <div
                     className='w-full h-full bg-[rgba(0,0,0,0.3)]'
