@@ -3,7 +3,7 @@ import HeroSection from '../layout/HeroSection'
 
 function HomePage(){
     return(
-        <main>
+        <main className='flex flex-col gap-40'>
             <Navbar />
             <HeroSection />
         </main>
