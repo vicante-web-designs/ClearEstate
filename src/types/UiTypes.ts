@@ -13,3 +13,10 @@ export interface NavLinkProps{
     label: string;
     link: string;
 }
+
+export interface FormInputProps{
+    id: string;
+    type: string;
+    label:string;
+    placeholder?: string;
+}
