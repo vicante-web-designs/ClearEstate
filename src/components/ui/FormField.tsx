@@ -12,7 +12,7 @@ function FormField({ id, type, label, placeholder }: FormInputProps){
                 id={id}
                 title={id}
                 placeholder={placeholder}
-                className='bg-gray-200 rounded-full py-3 px-6 focus-visible:border focus-visible:border-blue-600'
+                className='bg-gray-200 rounded-full py-3 px-6 focus:bg-blue-200 outline-0 caret-blue-800'
             />
         </div>
     )
