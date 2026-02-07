@@ -20,3 +20,11 @@ export interface FormInputProps{
     label:string;
     placeholder?: string;
 }
+
+export interface Listing{
+    title: string;
+    description: string;
+    location: string;
+    price: string
+}
+
