@@ -41,26 +41,6 @@ function CreateListingPage(){
                     type='number'
                     label='Price'
                 />
-
-                <article>
-                    <label htmlFor="">
-                        Tags
-                    </label>
-                    <input type="text" />
-                </article>
-
-                <FormField
-                    id='No. of Bedrooms'
-                    type='number'
-                    label='No. of Bedrooms'
-                />
-
-                <article>
-                    <label htmlFor="">
-                        Type
-                    </label>
-                    <input type="text" />
-                </article>
             </section>
 
             <Button 
