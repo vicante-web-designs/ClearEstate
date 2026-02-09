@@ -2,7 +2,7 @@ export interface ButtonProps{
     label: string;
     variant: Variant;
     type: 'button' | 'submit' | 'reset'
-    onClick?: () => void
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export type Variant = 'primary' | 'secondary' | 'danger'
