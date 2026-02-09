@@ -3,7 +3,7 @@ import type { ListingContextType, Listing } from '../types/UiTypes';
 
 const ListingContext = createContext<ListingContextType | undefined>(undefined);
 
-export const ListingProvider = {{ children }: { children: ReactNode }} => {
+export function ListingProvider({ children }: { children: ReactNode }){
     
     const [listings, setListings] = useState<Listing[]>([]);
     
