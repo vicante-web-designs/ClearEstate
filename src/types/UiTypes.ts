@@ -22,15 +22,3 @@ export interface FormFieldProps{
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
-
-export interface Listing{
-    title: string;
-    description: string;
-    location: string;
-    price: string
-}
-
-export interface ListingContextType{
-    listings: Listing[];
-    setListings: React.Dispatch<React.SetStateAction<Listing[]>>;
-}
