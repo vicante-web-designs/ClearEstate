@@ -1,10 +1,11 @@
-import { type ReactNode, useState } from 'react';
+import { type ReactNode } from 'react';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 import type { Listing } from '../../types/UiTypes';
 import { ListingContext } from './createListingContext';
 
 export function ListingProvider({ children }: { children: ReactNode }){
     
-    const [listings, setListings] = useState<Listing[]>([]);
+    const [listings, setListings] = useLocalStorage<Listing[]>('listings', []);
     
     const listingValue = {
         listings,
