@@ -69,8 +69,8 @@ src/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/property-listings-manager.git
-cd property-listings-manager
+git clone https://github.com/vicante-web-designs/ClearListings.git
+cd ClearListings
 ```
 
 ### 2. Install Dependencies
