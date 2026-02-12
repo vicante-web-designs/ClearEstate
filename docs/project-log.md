@@ -32,4 +32,4 @@
 ### Project Conventions & Component Inventory
 
 - Create CONVENTIONS.md to ensure consistency across codebase
-- Create COMPONENT.md to show full list of all components used
+- Create COMPONENTS.md to show full list of all components used
