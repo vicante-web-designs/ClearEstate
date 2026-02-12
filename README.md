@@ -54,8 +54,11 @@ src/
 │
 ├── pages/
 │ ├── HomePage
+│ ├── AboutPage
+│ ├── ContactPage
 │ ├── CreateListingPage
-│ └── ListingDetailPage
+│ ├── ListingsPage
+│ └── ListingDetailsPage
 │
 ├── context/
 │ └── ListingsContext
