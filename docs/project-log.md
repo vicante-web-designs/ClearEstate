@@ -28,3 +28,8 @@
 6. Login Page
 7. Sign Up page
 8. Create Listings Page
+
+### Project Conventions & Component Inventory
+
+- Create CONVENTIONS.md to ensure consistency across codebase
+- Create COMPONENT.md to show full list of all components used
