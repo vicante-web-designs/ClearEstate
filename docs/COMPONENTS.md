@@ -23,6 +23,7 @@ This is a list of every component used in this project. They are organized accor
 - CreateListing Forms
 - Search Bar
 - Filter Form
+- Contact Info
 
 ## Sections (Combined Molecules)
 
