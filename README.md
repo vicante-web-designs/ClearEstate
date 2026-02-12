@@ -75,17 +75,17 @@ This section explains the style and structure I use for commit messages. The goa
 
 | Prefix        | Purpose                                                      | Example                                       |
 |-------------  |---------------------------------------------------           |---------------------------------------------- |
-| **feat:**     | A new feature                                                | `feat: add property search filter`            |
-| **fix:**      | A bug fix                                                    | `fix: correct listing image upload error`     |
-| **docs:**     | Documentation changes (README, comments, guides)             | `docs: update README with setup instructions` |
-| **style:**    | Code style changes (formatting, whitespace, no logic impact) | `style: reformat CSS for listing cards`       |
-| **refactor:** | Code restructuring without changing functionality            | `refactor: move auth logic to services`       |
-| **perf:**     | Performance improvements                                     | `perf: optimize property query speed`         |
-| **test:**     | Adding or updating tests                                     | `test: add unit tests for listing form`       |
-| **chore:**    | Maintenance tasks (dependencies, configs, file moves)        | `chore: update dependencies`                  |
-| **ci:**       | Continuous integration changes                               | `ci: update GitHub Actions workflow`          |
-| **build:**    | Build system changes (webpack, npm, etc.)                    | `build: configure webpack for production`     |
-| **revert:**   | Reverting a previous commit                                  | `revert: undo listing form refactor`          |
+| **feat:**     | A new feature                                                | `feat: Add property search filter`            |
+| **fix:**      | A bug fix                                                    | `fix: Correct listing image upload error`     |
+| **docs:**     | Documentation changes (README, comments, guides)             | `docs: Update README with setup instructions` |
+| **style:**    | Code style changes (formatting, whitespace, no logic impact) | `style: Reformat CSS for listing cards`       |
+| **refactor:** | Code restructuring without changing functionality            | `refactor: Move auth logic to services`       |
+| **perf:**     | Performance improvements                                     | `perf: Optimize property query speed`         |
+| **test:**     | Adding or updating tests                                     | `test: Add unit tests for listing form`       |
+| **chore:**    | Maintenance tasks (dependencies, configs, file moves)        | `chore: Update dependencies`                  |
+| **ci:**       | Continuous integration changes                               | `ci: Update GitHub Actions workflow`          |
+| **build:**    | Build system changes (webpack, npm, etc.)                    | `build: Configure webpack for production`     |
+| **revert:**   | Reverting a previous commit                                  | `revert: Undo listing form refactor`          |
 
 ## ⚙️ Installation & Setup
 
