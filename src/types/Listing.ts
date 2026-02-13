@@ -20,13 +20,4 @@ export interface ListingContextType{
     setListings: React.Dispatch<React.SetStateAction<Listing[]>>;
 }
 
-export interface ListingCardProps{
-    id: string;
-    title: string;
-    location: string;
-    price: string;
-    bedrooms: number;
-    type: string;
-    availability: string;
-    images: string[];
-}
+export type ListingCardProps = Partial<Listing>
