@@ -16,11 +16,9 @@ function ListingCard({id, images, title, location, price, bedrooms, propertyType
 
             <div className='absolute z-10  h-fit top-0 left-0 right-0 m-4 flex justify-between items-center'>
                 <p className={
-                    ` bg-[rgba(255,255,255,0.9)] font-bold py-2 px-4 rounded-full ${status === "available"
+                    ` bg-[rgba(255,255,255,0.9)] font-bold py-2 px-4 rounded-full ${status?.toLowerCase() === "for sale"
                         ? "text-[rgba(21,128,61,0.8)]"
-                        : status === "pending"
-                        ? "text-[rgba(161,98,7,0.8)]"
-                        : "text-[rgba(185,28,28,0.8)]"
+                        : "text-[rgba(161,98,7,0.8)]"
                     }`
                 }>
                     {status}
