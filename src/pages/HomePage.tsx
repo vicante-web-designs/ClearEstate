@@ -29,8 +29,8 @@ function HomePage(){
                             location={listing.location}
                             price={listing.price}  
                             bedrooms={listing.bedrooms}
-                            type={listing.type}
-                            availability={listing.availability}
+                            propertyType={listing.propertyType}
+                            status={listing.status}
                         />
                     ))
                 }

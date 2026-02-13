@@ -1,6 +1,6 @@
 import type { ListingCardProps } from '../../types/Listing'
 
-function ListingCard({id, images, title, location, price, bedrooms, type, availability }: ListingCardProps){
+function ListingCard({id, images, title, location, price, bedrooms, propertyType, status }: ListingCardProps){
     return(
         <article className='w-full max-w-sm h-105 bg-white rounded-3xl shadow-md overflow-hidden relative' id={id}> 
             {
@@ -16,14 +16,14 @@ function ListingCard({id, images, title, location, price, bedrooms, type, availa
 
             <div className='absolute z-10  h-fit top-0 left-0 right-0 m-4 flex justify-between items-center'>
                 <p className={
-                    ` bg-[rgba(255,255,255,0.9)] font-bold py-2 px-4 rounded-full ${availability === "available"
+                    ` bg-[rgba(255,255,255,0.9)] font-bold py-2 px-4 rounded-full ${status === "available"
                         ? "text-[rgba(21,128,61,0.8)]"
-                        : availability === "pending"
+                        : status === "pending"
                         ? "text-[rgba(161,98,7,0.8)]"
                         : "text-[rgba(185,28,28,0.8)]"
                     }`
                 }>
-                    {availability}
+                    {status}
                 </p>
             </div>
 
@@ -50,7 +50,7 @@ function ListingCard({id, images, title, location, price, bedrooms, type, availa
 
                     
                     <p>
-                        Type: <span className='font-bold text-black'>{type}</span>
+                        Type: <span className='font-bold text-black'>{propertyType}</span>
                     </p>
                 </div>
 
