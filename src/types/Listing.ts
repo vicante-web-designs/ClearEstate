@@ -4,14 +4,18 @@ export interface Listing{
     title: string;
     description: string;
     location: string;
-    price: string;
+    state?: string;
+    city?: string;
+    price: number;
     agentID?: string;
     createdAt?: string;
-    tags?: string[];
+    features?: string[];
     images?: string[];
     bedrooms?: number;
-    type?: string;
-    availability?: string;
+    bathrooms?: number;
+    sizeSqft?: number;
+    propertyType?: string;
+    status?: string;
     isArchived?: boolean;
 }
 
