@@ -34,7 +34,10 @@
     --spacing-128: 8rem;
     --spacing-256: 16rem;
 
-
+    /* Radius themes */
+    --radius-4: 0.25rem;
+    --radius-8: 0.5rem;
+    --radius-16: 1rem;
 
 
 }
