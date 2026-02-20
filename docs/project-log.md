@@ -51,3 +51,7 @@
 ## Day 6
 
 - Get back into the flow
+
+## Day 7
+
+- Create style components in figma
