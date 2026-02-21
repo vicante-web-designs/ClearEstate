@@ -1,61 +1,47 @@
 import type { ListingCardProps } from '../../types/Listing'
 import { formatPrice } from '../../utils/formatPrice'
 
-function ListingCard({id, images, title, location, price, bedrooms, propertyType, status }: ListingCardProps){
+function ListingCard({id, images, title, location, city, state, price }: ListingCardProps){
     return(
-        <article className='w-full max-w-sm h-105 bg-white rounded-3xl shadow-md overflow-hidden relative' id={id}> 
+        <article
+            id={id}
+            className='bg-neutral-100 w-100 shadow-lg rounded-2xl overflow-hidden flex flex-col h-fit'
+        >
             {
-                images && images.length > 0 ? (
-                    <img
-                        src={images[0]} alt="" 
-                        className='w-full h-full object-cover relative z-0'
-                    />
-                ) : (
-                    <img src="" alt="" />
+                images && (
+                    <div className='overflow-hidden'>
+                        <img
+                            src={images[0]}
+                            className='w-full hover:scale-110 transition-all ease-in-out duration-500'
+                            alt="" 
+                        />
+                    </div>
                 )
             }
 
-            <div className='absolute z-10  h-fit top-0 left-0 right-0 m-4 flex justify-between items-center'>
-                <p className={
-                    ` bg-[rgba(255,255,255,0.9)] font-bold py-2 px-4 rounded-full ${status?.toLowerCase() === "for sale"
-                        ? "text-[rgba(21,128,61,0.8)]"
-                        : "text-[rgba(161,98,7,0.8)]"
-                    }`
-                }>
-                    {status}
-                </p>
-            </div>
+            <article className='px-16 py-24 flex flex-col gap-6'>
 
-            <div className='absolute z-2 bg-[rgba(255,255,255,0.9)] h-fit bottom-0 left-0 right-0 m-3 rounded-2xl py-4 px-6 flex flex-col gap-2'>
-                <h3 className='text-xl font-bold line-clamp-2 capitalize'>
-                    {title}
-                </h3>
-
-                <div className="flex justify-between">
-                        
-                    <p className='font-bold text-blue-600'>
-                        {
-                            price && formatPrice(price)
-                        }
-                    </p>
-
-                    <p>
-                        <span>📍</span> {location}
-                    </p>
-                </div>
-
-                <div className="flex justify-between">
-                    <p className='text-gray-700 flex items-center gap-1'>
-                        <span className='font-bold text-black'>{bedrooms}</span> 🛏️
-                    </p>
-
+                <div>
+                    <h3>
+                        {title}
+                    </h3>
                     
-                    <p>
-                        Type: <span className='font-bold text-black'>{propertyType}</span>
-                    </p>
+                    { // Listing Price 
+                        price && (
+                            <p className='text-xl font-bold text-blue-800'>
+                                {formatPrice(price)}
+                            </p>
+                        )
+                    }
                 </div>
 
-            </div>
+                <p className='font-semibold text-neutral-500'>
+                    {`${location}, ${city}, ${state}`}
+                </p>
+
+            </article>
+
+
         </article>
     )
 }

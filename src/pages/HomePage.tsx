@@ -27,10 +27,9 @@ function HomePage(){
                             images={listing.images}
                             title={listing.title}
                             location={listing.location}
-                            price={listing.price}  
-                            bedrooms={listing.bedrooms}
-                            propertyType={listing.propertyType}
-                            status={listing.status}
+                            state={listing.state}
+                            city={listing.city}
+                            price={listing.price}
                         />
                     ))
                 }

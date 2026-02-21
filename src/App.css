@@ -19,7 +19,7 @@
     /* Font weight themes */
     --font-weight-regular: 400;
     --font-weight-medium: 500;
-    --font-weight-semi-bold: 600;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
     /* Spacing themes */
@@ -45,6 +45,10 @@
 @layer base{
     body{
         @apply font-main
+    }
+
+    h3{
+        @apply font-semibold text-2xl
     }
 }
 
