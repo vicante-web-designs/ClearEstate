@@ -7,7 +7,7 @@ export interface Listing{
     city?: string;
     state?: string;
 
-    propertyType?: "Apartment" | "Duplex" | "Land" | "Commercial" | "House" | "Condo" | "Townhouse" | "Villa" | "Cottage";
+    propertyType?: string;
 
     bedrooms?: number;
     bathrooms?: number;
