@@ -30,6 +30,7 @@ function HomePage(){
                             state={listing.state}
                             city={listing.city}
                             price={listing.price}
+                            description={listing.description}
                         />
                     ))
                 }
