@@ -1,7 +1,14 @@
 function Footer(){
-    return(
-        <footer>
+    const getCurrentYear = () => {
+        const date = new Date();
 
+        return date.getFullYear();
+    }
+    return(
+        <footer className='flex justify-center bg-primary text-white p-24'>
+            <p>
+                {getCurrentYear()} &copy; ClearListing - All rights reserved
+            </p>
         </footer>
     )
 }
