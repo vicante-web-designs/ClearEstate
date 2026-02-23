@@ -9,7 +9,7 @@ function Navbar(){
 
             <img src={Logo} alt="ClearListing Logo" className='h-full rounded-full'/>
 
-            <div className='flex w-fit gap-48 justify-between'>
+            <div className='md:flex w-full justify-between hidden'>
                 <NavLink 
                     label='Home'
                     link='#'
@@ -30,6 +30,10 @@ function Navbar(){
                     label='Admin'
                     link='#'
                 />
+            </div>
+
+            <div className="md:hidden">
+                ☰
             </div>
         </nav>
     )
