@@ -7,7 +7,7 @@ function Footer(){
     return(
         <footer className='flex justify-center bg-primary text-white p-24'>
             <p>
-                {getCurrentYear()} &copy; ClearListing - All rights reserved
+                &copy; {getCurrentYear()}  ClearListing - All rights reserved
             </p>
         </footer>
     )
