@@ -5,11 +5,11 @@ function Navbar(){
 
     return(
         <nav className='rounded-full h-20 px-24
-         py-16 shadow-2xl bg-blue-100 flex items-center justify-between mx-8 my-10 fixed z-999 left-0 right-0 '>
+         py-16 shadow-2xl bg-blue-100 flex items-center justify-between mx-8 my-10 fixed z-999 left-0 right-0'>
 
             <img src={Logo} alt="ClearListing Logo" className='h-full rounded-full'/>
 
-            <div className='flex w-full border justify-between'>
+            <div className='flex w-fit gap-48 justify-between'>
                 <NavLink 
                     label='Home'
                     link='#'
