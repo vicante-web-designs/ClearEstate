@@ -4,6 +4,7 @@ import ListingCard from '../components/features/ListingCard'
 import { useContext } from 'react'
 import { ListingContext } from '../context/ListingContext/createListingContext'
 import Footer from '../layouts/Footer'
+import SearchBar from '../components/features/SearchBar'
 
 function HomePage(){
     const context = useContext(ListingContext)
@@ -18,6 +19,8 @@ function HomePage(){
         <main className='flex flex-col gap-40'>
             <Navbar />
             <HeroSection />
+
+            <SearchBar />
 
             <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
                 {
