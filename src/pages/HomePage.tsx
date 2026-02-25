@@ -29,10 +29,12 @@ function HomePage(){
             <HeroSection />
 
             <SearchBar 
-                searchFunction={setListingDisplay}
+                filterFunction={setListingDisplay}
             />
 
-            <FilterPanel />
+            <FilterPanel 
+                filterFunction={setListingDisplay}
+            />
 
             <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
                 {

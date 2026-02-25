@@ -1,8 +1,8 @@
 import { ListingContext } from '../../context/ListingContext/createListingContext'
 import { useContext, useState } from 'react'
-import type { SearchBarProps } from '../../types/UiTypes'
+import type { FilterProp } from '../../types/UiTypes'
 
-function SearchBar({ searchFunction }: SearchBarProps){
+function SearchBar({ filterFunction }: FilterProp){
     const [search, setSearch] = useState<string>('')
     const context = useContext(ListingContext)
 
@@ -17,7 +17,7 @@ function SearchBar({ searchFunction }: SearchBarProps){
 
         const filtered = listings.filter(listing => listing.title.toLowerCase().includes(search.toLowerCase().trim()))
 
-        searchFunction(filtered)
+        filterFunction(filtered)
 
     }
 
