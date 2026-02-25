@@ -24,6 +24,6 @@ export interface FormFieldProps{
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export interface SearchBarProps{
-    searchFunction: (listings: Listing[]) => void
+export interface FilterProp{
+    filterFunction: (listings: Listing[]) => void
 }
