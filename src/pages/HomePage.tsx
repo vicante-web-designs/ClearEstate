@@ -6,6 +6,7 @@ import { ListingContext } from '../context/ListingContext/createListingContext'
 import Footer from '../layouts/Footer'
 import SearchBar from '../components/features/SearchBar'
 import type { Listing } from '../types/Listing'
+import FilterPanel from '../components/features/FilterPanel'
 
 function HomePage(){
     const [listingDisplay, setListingDisplay] = useState<Listing[]>([]);
@@ -30,6 +31,8 @@ function HomePage(){
             <SearchBar 
                 searchFunction={setListingDisplay}
             />
+
+            <FilterPanel />
 
             <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
                 {
