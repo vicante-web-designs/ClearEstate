@@ -10,7 +10,7 @@ function FilterPanel({ filterFunction }: FilterProp){
     const context = useContext(ListingContext);
 
     if(! context){
-        return;
+        throw new Error('No Context available yet')
     } 
 
     const { listings } = context;
