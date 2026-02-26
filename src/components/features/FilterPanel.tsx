@@ -27,7 +27,7 @@ function FilterPanel({ filterFunction }: FilterProp){
         const filtered = listings.filter(listing => {
             const fullLocation = `${listing.location}${listing.state}${listing.city}`
 
-            const matchesPrice = !priceFilter || priceMatch[priceFilter](listing.price);
+            const matchesPrice = !priceFilter || priceMatch[priceFilter]?.(listing.price);
 
             const matchesLocation = !locationFilter || fullLocation.toLowerCase().includes(locationFilter.toLowerCase())
 
