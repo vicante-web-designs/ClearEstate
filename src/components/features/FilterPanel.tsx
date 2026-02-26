@@ -15,14 +15,18 @@ function FilterPanel({ filterFunction }: FilterProp){
 
     const { listings } = context;
 
-    const priceMatch = {
+
+    
+
+    useEffect(() => {
+        const priceMatch = {
         'under-10m': (price: number) => price < 10000000,
         '10m-20m': (price: number) => 10000000 <= price && price <= 20000000,
         '20m-30m': (price: number) => 20000000 <= price && price <= 30000000,
         'above-30m': (price: number) => price > 30000000
     }
 
-    const handleFilter = () => {
+        const handleFilter = () => {
         const filtered = listings.filter(listing => {
             const fullLocation = `${listing.location}${listing.state}${listing.city}`
 
@@ -36,9 +40,8 @@ function FilterPanel({ filterFunction }: FilterProp){
         filterFunction(filtered)
     }
 
-    useEffect(() => {
         handleFilter()
-    }, [priceFilter, locationFilter])
+    }, [priceFilter, locationFilter, listings, filterFunction])
 
     return (
         <section>
