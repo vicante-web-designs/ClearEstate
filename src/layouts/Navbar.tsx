@@ -1,7 +1,7 @@
 import Logo from '../../public/Images/Logo/ClearListing_Logo.png'
 import NavLink from '../components/ui/NavLink'
 
-function Navbar(){
+const Navbar = () => {
 
     return(
         <nav className='rounded-full h-20 px-24

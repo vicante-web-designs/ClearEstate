@@ -1,4 +1,4 @@
-function HeroSection(){
+const HeroSection = () => {
     return(
         <section className='h-screen relative'>
             <div className='relative w-full h-screen'>

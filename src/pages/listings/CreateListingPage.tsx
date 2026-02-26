@@ -5,7 +5,7 @@ import { ListingContext } from '../../context/ListingContext/createListingContex
 import type { Listing } from '../../types/Listing';
 import { useNavigate } from 'react-router-dom';
 
-function CreateListingPage(){
+const CreateListingPage = () => {
     const navigate = useNavigate();
 
     const context = useContext(ListingContext)

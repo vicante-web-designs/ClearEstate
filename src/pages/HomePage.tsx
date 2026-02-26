@@ -8,7 +8,7 @@ import SearchBar from '../components/features/SearchBar'
 import type { Listing } from '../types/Listing'
 import FilterPanel from '../components/features/FilterPanel'
 
-function HomePage(){
+const HomePage = () => {
     const [listingDisplay, setListingDisplay] = useState<Listing[]>([]);
 
     const context = useContext(ListingContext)
