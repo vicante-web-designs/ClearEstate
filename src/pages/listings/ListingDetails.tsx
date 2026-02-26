@@ -18,7 +18,7 @@ const ListingDetails = () => {
 
     const { listings } = context;
 
-    const listing = listings.find((listing: Listing) => listing.id === listingId)
+    const listing = listings.find((listing: Listing) => listing.id.toString() === listingId)
 
   return (
     <section className='flex flex-col'>
