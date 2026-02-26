@@ -16,7 +16,6 @@ export interface Listing{
     images: string[];
 
     description: string;
-    agentID: string;
     
     features: string[];
     
