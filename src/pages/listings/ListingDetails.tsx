@@ -4,8 +4,6 @@ import { ListingContext } from '../../context/ListingContext/createListingContex
 import type { Listing } from '../../types/Listing';
 import { formatPrice } from '../../utils/formatPrice';
 import { MapPin, Bed, Bath, Maximize, Home } from 'lucide-react'
-import Navbar from '../../layouts/Navbar';
-import Footer from '../../layouts/Footer';
 
 const ListingDetails = () => {
     const { listingId } = useParams();
@@ -22,7 +20,6 @@ const ListingDetails = () => {
 
   return (
     <section className='flex flex-col'>
-        <Navbar />
 
         {
             listing ? (
@@ -131,8 +128,6 @@ const ListingDetails = () => {
                 </p>
             )
         }
-
-        <Footer />
     </section>
   )
 }
