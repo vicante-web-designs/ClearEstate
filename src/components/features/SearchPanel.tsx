@@ -6,7 +6,7 @@ import { Search } from 'lucide-react'
 
 type PriceFilterKey = 'under-10m' | '10m-20m' | '20m-30m' | 'above-30m';
 
-function FilterPanel({ filterFunction }: FilterProp){
+function SearchPanel({ filterFunction }: FilterProp){
     const [priceFilter, setPriceFilter] = useState<PriceFilterKey>(); 
     const [locationFilter, setLocationFilter] = useState<string>('');
     const [searchValue, setSearchValue] = useState<string>('');
@@ -104,4 +104,4 @@ function FilterPanel({ filterFunction }: FilterProp){
     )
 }
 
-export default FilterPanel;
+export default SearchPanel;
