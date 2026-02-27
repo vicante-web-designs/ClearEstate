@@ -5,6 +5,7 @@ import { ListingContext } from '../context/ListingContext/createListingContext'
 import SearchBar from '../components/features/SearchBar'
 import type { Listing } from '../types/Listing'
 import FilterPanel from '../components/features/FilterPanel'
+import ListingLoadingState from '../components/ui/LoadingStates/ListingLoadingState'
 
 const HomePage = () => {
     const [listingDisplay, setListingDisplay] = useState<Listing[]>([]);
@@ -36,7 +37,8 @@ const HomePage = () => {
 
             <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
                 {
-                    listingDisplay && listingDisplay.map(listing => (
+                    listingDisplay ? (
+                        listingDisplay.map(listing => (
                         <ListingCard 
                             key={listing.id}
                             id={listing.id}
@@ -49,6 +51,9 @@ const HomePage = () => {
                             description={listing.description}
                         />
                     ))
+                    ) : (
+                        <ListingLoadingState />
+                    )
                 }
             </section>
         </main>
