@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage.tsx';
 import { ListingProvider } from './context/ListingContext/context.tsx';
 import ListingDetails from './pages/listings/ListingDetails.tsx';
 import MainLayout from './layouts/MainLayout.tsx';
+import ErrorPage from './pages/404 Page/ErrorPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,9 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <HomePage />},
-      { path: 'listings/:listingId', element: <ListingDetails /> }
-    ]
+      { path: 'listings/:listingId', element: <ListingDetails /> },
+    ],
+    errorElement: <ErrorPage />
   }
 ])
 
