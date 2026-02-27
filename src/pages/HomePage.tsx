@@ -1,9 +1,7 @@
-import Navbar from '../layouts/Navbar'
 import HeroSection from '../layouts/HeroSection'
 import ListingCard from '../components/features/ListingCard'
 import { useContext, useEffect, useState } from 'react'
 import { ListingContext } from '../context/ListingContext/createListingContext'
-import Footer from '../layouts/Footer'
 import SearchBar from '../components/features/SearchBar'
 import type { Listing } from '../types/Listing'
 import FilterPanel from '../components/features/FilterPanel'
@@ -26,10 +24,7 @@ const HomePage = () => {
     return(
         <main className='flex flex-col gap-40'>
             
-            <section>
-                <Navbar />
-                <HeroSection />
-            </section>
+            <HeroSection />
 
             <SearchBar 
                 filterFunction={setListingDisplay}
@@ -56,9 +51,6 @@ const HomePage = () => {
                     ))
                 }
             </section>
-
-
-            <Footer />
         </main>
     )
 }
