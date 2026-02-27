@@ -25,8 +25,11 @@ const HomePage = () => {
 
     return(
         <main className='flex flex-col gap-40'>
-            <Navbar />
-            <HeroSection />
+            
+            <section>
+                <Navbar />
+                <HeroSection />
+            </section>
 
             <SearchBar 
                 filterFunction={setListingDisplay}
