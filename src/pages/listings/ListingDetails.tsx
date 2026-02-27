@@ -26,10 +26,10 @@ const ListingDetails = () => {
                 <section className='max-w-3xl mx-auto'>
 
                     {/* Listing Image */}
-                    <img src={listing.images[0]} alt={`Image of ${listing.title}`} />
+                    <img src={listing.images[0]} alt={`Image of ${listing.title}`} className='object-cover w-full h-112.5 rounded-2xl'/>
 
                     {/* Listing content */}
-                    <div className='p-16'>
+                    <div className='flex flex-col gap-16 my-16'>
                         <div className='flex w-full justify-between items-end'>
                             <h1 className='text-5xl'>
                                 {listing.title}
