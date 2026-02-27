@@ -7,9 +7,11 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <main className='flex flex-col gap-40'>
+    <main>
       <Navbar />
-        {children}
+        <section className='flex flex-col gap-40'>
+            {children}
+        </section>
       <Footer />
     </main>
   )
