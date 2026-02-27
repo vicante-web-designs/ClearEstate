@@ -1,9 +1,10 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useContext } from 'react';
 import { ListingContext } from '../../context/ListingContext/createListingContext';
 import type { Listing } from '../../types/Listing';
 import { formatPrice } from '../../utils/formatPrice';
-import { MapPin, Bed, Bath, Maximize, Home } from 'lucide-react'
+import { MapPin, Bed, Bath, Maximize, Home, ArrowLeft } from 'lucide-react'
+import Footer from '../../layouts/Footer';
 
 const ListingDetails = () => {
     const { listingId } = useParams();
@@ -19,11 +20,20 @@ const ListingDetails = () => {
     const listing = listings.find((listing: Listing) => listing.id.toString() === listingId)
 
   return (
-    <section className='flex flex-col'>
+    <section className='flex flex-col mt-20'>
 
         {
             listing ? (
                 <section className='max-w-3xl mx-auto'>
+
+                    <button type='button' className='w-fit mb-8 text-sm text-blue-800 hover:text-gray-700 transition-colors duration-300 flex items-center gap-2'>
+            
+                        <ArrowLeft size={16}/>
+                        
+                        <Link to='/' className='underline underline-offset-2 font-bold decoration-2'>
+                            Back to home
+                        </Link>
+                    </button>
 
                     {/* Listing Image */}
                     <img src={listing.images[0]} alt={`Image of ${listing.title}`} className='object-cover w-full h-112.5 rounded-2xl'/>
@@ -128,6 +138,8 @@ const ListingDetails = () => {
                 </p>
             )
         }
+
+        <Footer />
     </section>
   )
 }

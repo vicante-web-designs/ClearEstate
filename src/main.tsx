@@ -19,10 +19,13 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <HomePage />},
-      { path: 'listings/:listingId', element: <ListingDetails /> },
     ],
     errorElement: <ErrorPage />
-  }
+  },
+  {
+    path: 'listings/:listingId', element: <ListingDetails />
+    },
+
 ])
 
 createRoot(document.getElementById('root')!).render(
