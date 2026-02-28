@@ -5,6 +5,7 @@ import { ListingContext } from '../context/ListingContext/createListingContext'
 import type { Listing } from '../types/Listing'
 import SearchPanel from '../components/features/SearchPanel'
 import ListingLoadingState from '../components/ui/LoadingStates/ListingLoadingState'
+import { Analytics } from '@vercel/analytics/react'
 
 const HomePage = () => {
     const [listingDisplay, setListingDisplay] = useState<Listing[]>([]);
@@ -51,6 +52,7 @@ const HomePage = () => {
                     )
                 }
             </section>
+            < Analytics />
         </main>
     )
 }
