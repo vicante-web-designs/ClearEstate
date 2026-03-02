@@ -29,7 +29,7 @@ const ListingsPage = () => {
 
         <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
             {
-                listingDisplay ? (
+                listingDisplay.length !== 0 ? (
                     listingDisplay.map(listing => (
                     <ListingCard 
                         key={listing.id}
