@@ -27,7 +27,7 @@ const ListingsPage = () => {
             filterFunction={setListingDisplay}
         />
 
-        <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
+        <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl mx-auto px-6 place-items-center py-16'>
             {
                 listingDisplay.length !== 0 ? (
                     listingDisplay.map(listing => (
