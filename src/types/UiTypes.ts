@@ -27,3 +27,8 @@ export interface FormFieldProps{
 export interface FilterProp{
     filterFunction: (listings: Listing[]) => void
 }
+
+export interface NavLinkProps{
+    to: string;
+    label: string;
+}
