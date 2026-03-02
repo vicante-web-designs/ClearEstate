@@ -1,11 +1,12 @@
-import type { NavLinkProps } from '../../types/UiTypes';
+import { Link, type LinkProps  } from 'react-router-dom'
 
-function NavLink ({link, label}: NavLinkProps){
-    return(
-        <a href={link} className={`border-b-2 border-b-blue-100 hover:border-b-2 px-2 transition-all hover:border-blue-500 ease-in duration-300 text-sm`}>
-            {label}
-        </a>
-    )
+
+const NavLink = ({ to, children }: LinkProps) => {
+  return (
+    <Link to={to} className='bg-blue-600 hover:bg-blue-400 shadow-blue-400 shadow-2xl text-white px-6 py-3 rounded-full transition-all ease-in duration-200 w-fit'>
+        {children}
+    </Link>
+  )
 }
 
-export default NavLink;
+export default NavLink
