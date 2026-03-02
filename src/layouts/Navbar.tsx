@@ -29,11 +29,11 @@ const Navbar = () => {
                 <img src={Logo} alt="ClearListing Logo" className='h-full rounded-full'/>
 
                 <div className='md:flex w-full justify-between hidden'>
-                    <NavLink label='Home' link='#' />
-                    <NavLink label='Listings' link='#' />
-                    <NavLink label='About' link='#' />
-                    <NavLink label='Contact' link='#' />
-                    <NavLink label='Admin' link='#' />
+                    <NavLink children='Home' to='/' />
+                    <NavLink children='Listings' to='/listings' />
+                    <NavLink children='About' to='/' />
+                    <NavLink children='Contact' to='/' />
+                    <NavLink children='Admin' to='/' />
                 </div>
 
                 <div className="md:hidden">☰</div>
