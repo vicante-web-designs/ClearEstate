@@ -6,6 +6,7 @@ import type { Listing } from '../types/Listing'
 import SearchPanel from '../components/features/SearchPanel'
 import ListingLoadingState from '../components/ui/LoadingStates/ListingLoadingState'
 import { Analytics } from '@vercel/analytics/react'
+import NavLink from '../components/ui/NavLink'
 
 const HomePage = () => {
     const [listingDisplay, setListingDisplay] = useState<Listing[]>([]);
@@ -31,26 +32,30 @@ const HomePage = () => {
                 filterFunction={setListingDisplay}
             />
 
-            <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
-                {
-                    listingDisplay ? (
-                        listingDisplay.map(listing => (
-                        <ListingCard 
-                            key={listing.id}
-                            id={listing.id}
-                            images={listing.images}
-                            title={listing.title}
-                            location={listing.location}
-                            state={listing.state}
-                            city={listing.city}
-                            price={listing.price}
-                            description={listing.description}
-                        />
-                    ))
-                    ) : (
-                        <ListingLoadingState />
-                    )
-                }
+            <section className='flex flex-col gap-48 items-center'>
+                <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
+                    {
+                        listingDisplay ? (
+                            listingDisplay.map(listing => (
+                            <ListingCard 
+                                key={listing.id}
+                                id={listing.id}
+                                images={listing.images}
+                                title={listing.title}
+                                location={listing.location}
+                                state={listing.state}
+                                city={listing.city}
+                                price={listing.price}
+                                description={listing.description}
+                            />
+                        ))
+                        ) : (
+                            <ListingLoadingState />
+                        )
+                    }
+                </section>
+
+                <NavLink to='/listings' children={'View all Listings'} />
             </section>
             < Analytics />
         </main>
