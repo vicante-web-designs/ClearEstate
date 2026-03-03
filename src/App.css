@@ -3,42 +3,42 @@
 @theme{
 
     /* Colour themes */
-    --color-primary: #2C2F5A;
+    --color-bg-main: #F5F3EB;
+    --color-text-primary: #1D1D1D;
+    --color-text-secondary: #818181;
+    --color-primary: #B7410E;
     --color-secondary: #C5A46D;
     --color-neutral-100: #fff;
     --color-neutral-200: #F7F7F7;
     --color-neutral-400: #C4C4C4;
     --color-neutral-600: #6B6B6B;
     --color-success: #3BA55D;
-    --color-error: #D93025;
+    --color-error: #ff0000;
     --color-warning: #F5A623;
 
     /* Font themes */
     --font-main: 'Manrope', sans-serif;
 
     /* Font weight themes */
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
     /* Spacing themes */
-    --spacing-4: 0.25rem;
-    --spacing-8: 0.5rem;
-    --spacing-16: 1rem;
-    --spacing-24: 1.5rem;
-    --spacing-32: 2rem;
-    --spacing-48: 3rem;
-    --spacing-64: 4rem;
-    --spacing-96: 6rem;
-    --spacing-128: 8rem;
-    --spacing-256: 16rem;
-
-    /* Radius themes */
-    --radius-4: 0.25rem;
-    --radius-8: 0.5rem;
-    --radius-16: 1rem;
-
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+    --spacing-5xl: 8rem;
+    --spacing-6xl: 16rem;
 
 }
 
