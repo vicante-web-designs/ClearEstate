@@ -79,3 +79,8 @@
 
 - Use react-router navigation on return button
 - Remove link import
+
+## Day 13
+
+- Create seperate listings page
+- Create two different types of links. One for the navbar, and the other for in page links
