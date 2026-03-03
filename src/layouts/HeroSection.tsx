@@ -20,13 +20,13 @@ const HeroSection = () => {
             </div>
 
             <article className='absolute z-2 *:text-white *:text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/12 w-full h-fit flex flex-col gap-8 items-center'>
-                <h1 className='text-[96px] leading-20 tracking-tighter font-bold'>
-                    Find Your Next Home, <span className='text-orange-500'>
+                <h1 className='font-bold'>
+                    Find Your Next Home, <span className='text-primary'>
                         Faster.
                     </span>
                 </h1>
 
-                <h2 className='text-2xl font-light leading-[1.6em] max-w-[80%]'>
+                <h2 className='font-light text-secondary'>
                     Browse verified listings in real estate and architecture, designed for modern buyers and sellers.
                 </h2>
             </article>
