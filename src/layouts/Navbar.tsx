@@ -1,4 +1,5 @@
 import Logo from '../../public/Images/Logo/ClearListing_Logo.png'
+import Button from '../components/ui/Button'
 import NavLink from '../components/ui/NavLink'
 import { useState, useEffect } from 'react'
 
@@ -20,23 +21,26 @@ const Navbar = () => {
             {/* placeholder to prevent content jump when navbar becomes fixed */}
             <div className='h-0'/>
 
-            <nav className={`h-20 px-24 py-16 flex items-center fixed justify-between z-50 left-0 right-0 mx-auto transition-all duration-500 ease-in-out mt-8 max-w-3xl  ${
+            <nav className={`h-20 px-8 flex items-center fixed justify-between z-50 left-0 right-0 transition-all duration-500 ease-in-out w-full  ${
                 isSticky
-                ? 'top-4 fixed rounded-full bg-white shadow-2xl transition-all duration-200 ease-in-out'
-                : 'top-10 bg-blue-100 shadow-2xl mb-20 rounded-lg'
+                ? 'top-4 fixed shadow-2xl transition-all duration-200 ease-in-out *:text-black'
+                : 'mb-20'
             }`}>
 
-                <img src={Logo} alt="ClearListing Logo" className='h-full rounded-full'/>
+                <img src={Logo} alt='ClearListing Logo' className='h-12 w-auto rounded-full'/>
 
-                <div className='md:flex w-full justify-between hidden'>
-                    <NavLink children='Home' to='/' />
-                    <NavLink children='Listings' to='/listings' />
-                    <NavLink children='About' to='/' />
-                    <NavLink children='Contact' to='/' />
-                    <NavLink children='Admin' to='/' />
-                </div>
+                <NavLink children='About' to='/' />
+                
+                <NavLink children='Listings' to='/listings' />
+                
+                <NavLink children='Contact' to='/' />
 
-                <div className="md:hidden">☰</div>
+                <Button 
+                    label='Contact'
+                    type='button'
+                    variant='secondary'
+                />
+
             </nav>
         </>
     )
