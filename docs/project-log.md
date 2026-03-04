@@ -84,3 +84,7 @@
 
 - Create seperate listings page
 - Create two different types of links. One for the navbar, and the other for in page links
+
+## Day 14
+
+- Adjust styling themes to fit project design
