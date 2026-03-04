@@ -166,6 +166,14 @@
         @apply text-text-secondary
     }
 
+    .logo-text {
+        @apply font-bold text-lg tracking-tight-1
+               md:text-xl md:tracking-tight-2
+               lg:text-2xl lg:tracking-tight-3;
+
+        -webkit-text-stroke: 1px var(--color-primary);
+    }
+
 }
 
 @layer utilities {
