@@ -5,7 +5,7 @@ function Button({label, type, variant, onClick}: ButtonProps){
 
     const variants: ButtonVariant = {
         primary: 'bg-blue-600 hover:bg-blue-400 shadow-blue-400 shadow-2xl text-white',
-        secondary: 'bg-secondary text-text-primary',
+        secondary: 'bg-secondary text-text-primary hover:bg-bg-main',
         danger: 'bg-error hover:bg-red-400 shadow-red-400 text-white'
     }
 

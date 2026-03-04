@@ -23,7 +23,7 @@ const Navbar = () => {
 
             <nav className={`h-20 px-8 flex items-center fixed justify-between z-50 left-0 right-0 transition-all duration-500 ease-in-out w-full  ${
                 isSticky
-                ? 'top-4 fixed shadow-2xl transition-all duration-200 ease-in-out *:text-black'
+                ? 'fixed shadow-2xl transition-all duration-200 ease-in-out bg-[rgba(219,212,202,1)] *:text-black backdrop-blur-lg'
                 : 'mb-20'
             }`}>
 
