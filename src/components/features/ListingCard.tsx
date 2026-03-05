@@ -6,60 +6,65 @@ import Button from '../ui/Button'
 function ListingCard({id, images, title, location, city, state, price, description }: ListingCardProps){
     return(
         
-            <article
+           <Link to={`/listings/${id}`} className='w-100 h-full'>
+
+             <article
                 id={id}
-                className='bg-neutral-100 w-100 shadow-lg rounded-2xl overflow-hidden flex flex-col h-fit'
-            >
-                {
-                    images && (
-                        <div className='overflow-hidden'>
-                            <img
-                                src={images[0]}
-                                className='w-full hover:scale-110 transition-all ease-in-out duration-500'
-                                alt="" 
-                            />
-                        </div>
-                    )
-                }
-
-                <article className='px-16 py-24 flex flex-col gap-6'>
-
+                className='w-100 flex flex-col h-full justify-between'
+                >
                     <div>
-                        <h3>
-                            {title}
-                        </h3>
-                        
-                        { // Listing Price 
-                            price && (
-                                <p className='text-xl font-bold text-blue-800'>
-                                    {formatPrice(price)}
-                                </p>
+                        {
+                            images && (
+                                <div className='overflow-hidden'>
+                                    <img
+                                        src={images[0]}
+                                        className='w-full hover:scale-110 transition-all ease-in-out duration-500 h-68'
+                                        alt="" 
+                                    />
+                                </div>
                             )
                         }
 
-                        <p>
-                            {description}
-                        </p>
+                        {/* Title, and price*/}
+                        <article className='py-2 flex flex-col gap-6'>
+
+                            <div>
+                                <h3>
+                                    {title}
+                                </h3>
+                                
+                                { // Listing Price 
+                                    price && (
+                                        <p className='text-xl font-bold text-primary'>
+                                            {formatPrice(price)}
+                                        </p>
+                                    )
+                                }
+                            </div>
+
+                        </article>
                     </div>
 
-                    <p className='font-semibold text-neutral-500'>
-                        {`${location}, ${city}, ${state}`}
-                    </p>
+                    <div className='flex flex-col gap-2'>
+                        <p className='font-semibold text-neutral-700'>
+                                {`${location}, ${city}, ${state}`}
+                        </p>
+ 
+                        <Link to={`/listings/${id}`}>
+                            <div className='flex justify-center *:w-full'>
+                                <Button 
+                                    label='View details'
+                                    type='button'
+                                    variant='secondary'
+                                />
+                            </div>
+                        </Link>
+                    </div>
+
 
                 </article>
+           </Link>
 
-                <Link to={`/listings/${id}`}>
-                    <div className='flex justify-center *:w-full px-16 pb-16'>
-                        <Button 
-                            label='View details'
-                            type='button'
-                            variant='secondary'
-                        />
-                    </div>
-                </Link>
-
-
-            </article>
     )
 }
 

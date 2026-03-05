@@ -33,7 +33,7 @@ const HomePage = () => {
             />
 
             <section className='flex flex-col gap-48 items-center'>
-                <section className='flex w-full flex-wrap px-10 items-center justify-center gap-10'>
+                <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full max-w-7xl mx-auto px-6 place-items-center py-16'>
                     {
                         listingDisplay ? (
                             listingDisplay.map(listing => (
