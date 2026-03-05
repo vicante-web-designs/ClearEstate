@@ -74,25 +74,25 @@
     --breakpoint-xl: 1280px;
 
     /* Leading (line-height) themes */
-    --leading-h1-mobile: 1.25em;
-    --leading-h1-tablet: 1.2em;
-    --leading-h1-desktop: 1.1em;
+    --leading-h1-mobile: 1.15em;
+    --leading-h1-tablet: 1.1em;
+    --leading-h1-desktop: 1.05em;
 
-    --leading-h2-mobile: 1.3em;
-    --leading-h2-tablet: 1.25em;
-    --leading-h2-desktop: 1.2em;
+    --leading-h2-mobile: 1.25em;
+    --leading-h2-tablet: 1.2em;
+    --leading-h2-desktop: 1.15em;
 
-    --leading-h3-mobile: 1.35em;
-    --leading-h3-tablet: 1.32em;
-    --leading-h3-desktop: 1.3em;
+    --leading-h3-mobile: 1.3em;
+    --leading-h3-tablet: 1.28em;
+    --leading-h3-desktop: 1.25em;
 
     --leading-display-mobile: 1em;
-    --leading-display-tablet: 1.15em;
-    --leading-display-desktop: 1.1em;
+    --leading-display-tablet: 0.95em;
+    --leading-display-desktop: 0.9em;
 
-    --leading-body-mobile: 1.4em;
-    --leading-body-tablet: 1.45em;
-    --leading-body-desktop: 1.5em;
+    --leading-body-mobile: 1.6em;
+    --leading-body-tablet: 1.65em;
+    --leading-body-desktop: 1.7em;
 
     --leading-small: 1.6em;
     --leading-link: 1.4em;
@@ -100,80 +100,127 @@
     /* Tracking (letter-spacing) themes */
     --tracking-tight-1: -0.005em;
     --tracking-tight-2: -0.01em;
-    --tracking-tight-3: -0.015em;
-    --tracking-tight-4: -0.02em;
+    --tracking-tight-3: -0.02em;
+    --tracking-tight-4: -0.03em;
     --tracking-none: 0em;
-    --tracking-wide-1: 0.002em;
-    --tracking-wide-2: 0.005em;
+    --tracking-wide-1: 0.05em;
+    --tracking-wide-2: 0.1em;
+    --tracking-wide-3: 0.2em;
 
 }
 
 @layer base {
 
     body {
-        @apply font-main text-text-primary bg-bg-main;
+        @apply font-main text-text-primary bg-bg-main font-light antialiased;
     }
 
+    /* 
+        Luxury typography principle:
+        - Headings are light/thin — letting space and size do the work
+        - Wide tracking on small text, tight tracking on large text
+        - Generous line heights on body, tight on display
+    */
+
     h1 {
-        @apply font-light text-4xl leading-h1-mobile tracking-tight-1
-               md:text-5xl md:leading-h1-tablet md:tracking-tight-2
-               lg:text-6xl lg:leading-h1-desktop lg:tracking-tight-3;
+        @apply font-thin uppercase text-white
+               text-4xl leading-h1-mobile tracking-tight-2
+               md:text-6xl md:leading-h1-tablet md:tracking-tight-3
+               lg:text-8xl lg:leading-h1-desktop lg:tracking-tight-4;
     }
 
     h2 {
-        @apply font-regular text-3xl leading-h2-mobile tracking-tight-1
-               md:text-4xl md:leading-h2-tablet
-               lg:text-5xl lg:leading-h2-desktop;
+        @apply font-extralight uppercase
+               text-3xl leading-h2-mobile tracking-tight-1
+               md:text-4xl md:leading-h2-tablet md:tracking-tight-2
+               lg:text-6xl lg:leading-h2-desktop lg:tracking-tight-3;
     }
 
     h3 {
-        @apply font-semibold text-2xl leading-h3-mobile tracking-none
-               md:text-3xl md:leading-h3-tablet
-               lg:leading-h3-desktop;
+        @apply font-light
+               text-xl leading-h3-mobile tracking-none
+               md:text-2xl md:leading-h3-tablet
+               lg:text-3xl lg:leading-h3-desktop lg:tracking-tight-1;
     }
 
     p {
-        @apply font-medium text-xs leading-body-mobile tracking-wide-1
+        @apply font-light text-text-secondary
+               text-xs leading-body-mobile tracking-wide-1
                md:text-sm md:leading-body-tablet
                lg:text-base lg:leading-body-desktop;
     }
 
     a {
-        @apply font-medium text-xs leading-link tracking-wide-2
-               md:text-sm;
+        @apply font-regular text-xs leading-link tracking-wide-2
+               md:text-sm
+               hover:text-primary transition-colors duration-300;
+    }
+
+    small {
+        @apply font-regular text-2xs leading-small tracking-wide-3 uppercase text-text-secondary;
     }
 
 }
 
 @layer components {
 
+    /* Large editorial display heading — for hero sections */
     .display-heading {
-        @apply font-bold text-6xl leading-display-mobile tracking-tight-2
+        @apply font-thin uppercase
+               text-6xl leading-display-mobile tracking-tight-2
                md:text-8xl md:leading-display-tablet md:tracking-tight-3
                lg:text-9xl lg:leading-display-desktop lg:tracking-tight-4;
     }
 
-    .sub-heading{
-        @apply font-light text-lg leading-h2-mobile tracking-none
-               md:text-4xl md:leading-h2-tablet
-               lg:text-5xl lg:leading-h2-desktop;
+    /* Eyebrow label — sits above headings */
+    .eyebrow {
+        @apply font-regular uppercase text-2xs tracking-wide-3 text-secondary
+               md:text-xs;
     }
 
+    /* Subheading — sits below main headings */
+    .sub-heading {
+        @apply font-light text-text-secondary
+               text-sm leading-body-mobile tracking-wide-1
+               md:text-base md:leading-body-tablet
+               lg:text-lg lg:leading-body-desktop;
+    }
+
+    /* Small utility copy */
     .small-body-copy {
-        @apply font-regular text-2xs leading-small tracking-wide-2;
+        @apply font-regular text-2xs leading-small tracking-wide-2 text-text-secondary;
     }
 
-    .link {
-        @apply font-medium text-xs leading-link tracking-wide-2
-               md:text-sm;
+    /* Decorative divider — thin gold line */
+    .luxury-divider {
+        @apply w-12 h-px bg-secondary mx-auto my-6
+               md:w-16 md:my-8
+               lg:w-20 lg:my-10;
     }
 
-    .secondary-copy{
-        @apply text-text-secondary
+    /* Secondary muted copy */
+    .secondary-copy {
+        @apply text-text-secondary font-light;
+    }
+
+    /* Accent text — gold highlight */
+    .accent-text {
+        @apply text-secondary font-regular italic;
     }
 
 }
 
 @layer utilities {
+
+    /* Outlined text utility */
+    .text-outline {
+        -webkit-text-stroke: 1px var(--color-primary);
+        color: transparent;
+    }
+
+    .text-outline-secondary {
+        -webkit-text-stroke: 1px var(--color-secondary);
+        color: transparent;
+    }
 
 }
