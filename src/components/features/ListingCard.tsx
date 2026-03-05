@@ -6,11 +6,11 @@ import Button from '../ui/Button'
 function ListingCard({id, images, title, location, city, state, price }: ListingCardProps){
     return(
         
-           <Link to={`/listings/${id}`} className='w-100 h-full'>
+           <Link to={`/listings/${id}`} className='w-100 h-fit'>
 
              <article
                 id={id}
-                className='w-100 flex flex-col h-full justify-between'
+                className='w-100 flex flex-col h-130 justify-between'
                 >
                     <div>
                         {
