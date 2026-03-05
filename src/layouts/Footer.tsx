@@ -5,10 +5,10 @@ const Footer = () => {
         return date.getFullYear();
     }
     return(
-        <footer className='flex justify-center bg-primary text-white p-24 mt-40'>
-            <p>
+        <footer className='flex justify-center bg-bg-secondary text-bg-main p-24 mt-40'>
+            <span>
                 &copy; {getCurrentYear()}  ClearListing - All rights reserved
-            </p>
+            </span>
         </footer>
     )
 }
