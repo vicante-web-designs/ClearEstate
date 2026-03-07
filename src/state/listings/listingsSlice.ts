@@ -1,12 +1,13 @@
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import type { Listing } from '../../types/Listing';
+import { mockListings } from '../../data/ListingData';
 
 interface ListingState {
     listingValue: Listing[];
 }
 
 const initialState: ListingState = {
-    listingValue: []
+    listingValue: mockListings
 }
 
 const listingSlice = createSlice({
@@ -16,3 +17,5 @@ const listingSlice = createSlice({
 
     }
 })
+
+export default listingSlice.reducer;
